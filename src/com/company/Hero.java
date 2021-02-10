@@ -5,6 +5,11 @@ public class Hero {
     private int damage;
     private String superPower;
 
+
+    public Hero(){
+
+    }
+
     public Hero(int health, int damage, String superPower) {
         this.health = health;
         this.damage = damage;
@@ -15,6 +20,10 @@ public class Hero {
         this.health = health;
         this.damage = damage;
     }
+
+    public Hero(int i) {
+    }
+
 
     public int getHealth() {
         return health;
@@ -27,8 +36,7 @@ public class Hero {
     public String getSuperPower() {
         return superPower;
     }
-    public void printInfo(){
-        System.out.println("Health:"+ health + " Damage:" + damage + " Super power:" + superPower);
-    }
+
+
 }
 

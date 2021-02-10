@@ -9,31 +9,30 @@ public class Main {
         boss.getSuperDefense();
         boss.printInfo();
 
-        createHeroes();
+        Hero[] array = new Hero[3];
+        array = createHeroes();
+        for (int i = 0; i < array.length; i++) {
 
+            System.out.println("Damage: " + array[i].getDamage() + " Health: " + array[i].getHealth() + " Super power: " + array[i].getSuperPower());
 
-
-
-
-
-
-
-
-
-
+        }
 
 
 
     }
 
 
-    public static void createHeroes () {
+    public static Hero[] createHeroes () {
+
         Hero hero = new Hero(300, 50, "Fast");
         Hero hero1 = new Hero(350, 60);
         Hero hero2 = new Hero(250, 40, "Strong");
-        hero.printInfo();
-        hero1.printInfo();
-        hero2.printInfo();
+
+        Hero[] heroes = new Hero[3];
+        heroes[0] = hero;
+        heroes[1] = hero1;
+        heroes[2] = hero2;
+        return heroes;
 
     }
 
